@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import placeholderimage from "./placeholder.png"
-// import data from "./projects.json"
 
 const data = [
   { title: 'Card 1', body: 'This is the body of card 1' },
@@ -49,19 +48,3 @@ const GridExample = () => (
 
 
 export default GridExample;
-
-{/* <Container className='p-4'>
-<Row>
-  {data.map(app => (<Col><Card>
-      <img className='card-img-top' src={placeholderimage}  alt="Card image" height="200px"></img>
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a longer card with supporting text below as a natural
-          lead-in to additional content. This content is a little bit
-          longer.
-        </Card.Text>
-      </Card.Body>
-    </Card></Col>))}
-</Row>
-</Container> */}

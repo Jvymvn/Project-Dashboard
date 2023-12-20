@@ -1,30 +1,31 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
-import placeholderimage from "./placeholder.png"
+import placeholderimage from "./images/placeholder.png"
+import timerImage from "./images/timer-image.png"
 
 const data = [
-  { title: 'Card 1', body: 'This is the body of card 1' },
-  { title: 'Card 2', body: 'This is the body of card 2' },
-  { title: 'Card 3', body: 'This is the body of card 3' },
-  { title: 'Card 4', body: 'This is the body of card 4' },
-  { title: 'Card 5', body: 'This is the body of card 5' },
-  { title: 'Card 6', body: 'This is the body of card 6' },
-  { title: 'Card 7', body: 'This is the body of card 7' },
-  { title: 'Card 8', body: 'This is the body of card 8' },
-  { title: 'Card 9', body: 'This is the body of card 9' },
+  { title: 'Countdown Timer', body: 'Count down the days, hours, minutes, and seconds until an event!', siteUrl:"eclectic-liger-410959.netlify.app", img: timerImage },
+  { title: 'Card 2', body: 'This is the body of card 2', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 3', body: 'This is the body of card 3', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 4', body: 'This is the body of card 4', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 5', body: 'This is the body of card 5', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 6', body: 'This is the body of card 6', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 7', body: 'This is the body of card 7', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 8', body: 'This is the body of card 8', siteUrl:"www.google.com", img: placeholderimage },
+  { title: 'Card 9', body: 'This is the body of card 9', siteUrl:"www.google.com", img: placeholderimage },
 ];
 
 const cards = data.map((card, index) => (
   <Col key={index} xs={12} md={4}>
     <Card style={{ width: '25rem', margin: "15px" }}>
-      <Image className='' src={placeholderimage} thumbnail />
+      <Image className='' src={card.img} thumbnail />
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
         <Card.Text>
           {card.body}
         </Card.Text>
-        <Button href="https://www.google.com" target="_blank">Visit App</Button>
+        <Button href={`https://${card.siteUrl}`} target="_blank">Visit App</Button>
       </Card.Body>
     </Card>
   </Col>

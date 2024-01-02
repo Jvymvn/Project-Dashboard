@@ -1,17 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
-import { placeholderimage, timerImage, htmlSvg, cssSvg, jsSvg } from './components/Images';
+import { placeholderimage, timerImage, waterdrop, htmlSvg, cssSvg, jsSvg, tsSvg } from './components/Images';
 
 const techs = {
   html: htmlSvg,
   css: cssSvg,
   jscript: jsSvg,
+  typescript: tsSvg,
 };
 
 const data = [
   { id: 1, title: 'Countdown Timer', body: 'Count down the days, hours, minutes, and seconds until an event!', siteUrl: 'eclectic-liger-410959.netlify.app', img: timerImage, icons: ['html', 'css', 'jscript'] },
-  { id: 2, title: 'Card 2', body: 'This is the body of card 2', siteUrl: 'www.google.com', img: placeholderimage, icons: ['html', 'css'] },
+  { id: 2, title: 'Water Intake Tracker', body: 'Track your progress toward your water intake goal!', siteUrl: 'main--startling-empanada-5db6ee.netlify.app/', img: waterdrop, icons: ['typescript'] },
   { title: 'Card 3', body: 'This is the body of card 3', siteUrl: "www.google.com", img: placeholderimage, icons: [] },
   { title: 'Card 4', body: 'This is the body of card 4', siteUrl: "www.google.com", img: placeholderimage, icons: [] },
   { title: 'Card 5', body: 'This is the body of card 5', siteUrl: "www.google.com", img: placeholderimage, icons: [] },
@@ -32,8 +33,8 @@ const TechIcons = ({ technologies }) => (
 
 const cards = data.map((card) => (
   <Col key={card.id} xs={12} md={4}>
-    <Card style={{ width: '25rem', margin: '15px' }}>
-      <Image className='' src={card.img} thumbnail />
+    <Card style={{ width: '25rem', height:"39rem", margin: '15px' }}>
+      <Image className='' src={card.img} style={{maxHeight: "400px"}} thumbnail />
       <Card.Body>
         <TechIcons technologies={card.icons} />
         <br/>
